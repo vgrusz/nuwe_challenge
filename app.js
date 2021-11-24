@@ -20,7 +20,7 @@ app.get("/companiesSortedBySize", async (req, res) => {
 
 app.get("/companiesSortedByFound", async (req, res) => {
   try {
-    companiesListOrderedByFound = await companyController.getCompaniesListOrderedByFound();
+    let companiesListOrderedByFound = await companyController.getCompaniesListOrderedByFound();
 
     res.send(companiesListOrderedByFound);
   } catch (error) {
@@ -31,7 +31,7 @@ app.get("/companiesSortedByFound", async (req, res) => {
 
 app.get("/quantityOfCompaniesGroupedByIndustry", async (req, res) => {
   try {
-    quantityOfCompaniesGroupedByIndustry = await companyController.getQuantityOfCompaniesGroupedByIndustry();
+    let quantityOfCompaniesGroupedByIndustry = await companyController.getQuantityOfCompaniesGroupedByIndustry();
 
     res.send(quantityOfCompaniesGroupedByIndustry);
   } catch (error) {
@@ -42,7 +42,7 @@ app.get("/quantityOfCompaniesGroupedByIndustry", async (req, res) => {
 
 app.get("/quantityOfCompaniesGroupedBySize", async (req, res) => {
   try {
-    quantityOfCompaniesGroupedBySize = await companyController.getQuantityOfCompaniesGroupedBySize();
+    let quantityOfCompaniesGroupedBySize = await companyController.getQuantityOfCompaniesGroupedBySize();
 
     res.send(quantityOfCompaniesGroupedBySize);
   } catch (error) {
@@ -53,7 +53,7 @@ app.get("/quantityOfCompaniesGroupedBySize", async (req, res) => {
 
 app.get("/quantityOfCompaniesGroupedByFounded", async (req, res) => {
   try {
-    quantityOfCompaniesGroupedByFounded = await companyController.getQuantityOfCompaniesGroupedByFounded();
+    let quantityOfCompaniesGroupedByFounded = await companyController.getQuantityOfCompaniesGroupedByFounded();
 
     res.send(quantityOfCompaniesGroupedByFounded);
   } catch (error) {

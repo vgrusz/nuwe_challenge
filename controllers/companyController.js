@@ -1,5 +1,8 @@
 var companyService = require("../services/companyService");
 
+//Due to lack of bussinnes logic this file is only future-proof at this stage.
+//It only passes execution straigth to services
+
 module.exports = {
   getCompaniesListOrderedBySize: async () => {
     try {

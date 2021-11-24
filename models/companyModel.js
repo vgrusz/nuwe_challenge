@@ -3,7 +3,7 @@ var conection = require("../db");
 module.exports = {
   getCompaniesListOrderedBySize: async () => {
     try {
-      var result = await conection.query("select * from companies");
+      var result = await conection.query("SELECT * FROM companies");
       return result;
     } catch (error) {
       console.log(error);
@@ -13,6 +13,10 @@ module.exports = {
   getCompaniesListOrderedByFound: async () => {
     try {
       var result = await conection.query("SELECT * FROM companies ORDER BY if(founded = 'None','0000',founded) ");
+      /*the query uses an IF function in a calculated SQL row to replace "None" with "0000" 
+      in order to get records with "None" value of year of fundation at first places, and 
+      after those records the remaining records sorted by year. */
+
       return result;
     } catch (error) {
       console.log(error);

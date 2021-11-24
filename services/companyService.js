@@ -4,10 +4,18 @@ module.exports = {
   getCompaniesListOrderedBySize: async () => {
     try {
       var companiesListOrderedBySize = await companyModel.getCompaniesListOrderedBySize();
+      /*Due to the nature of "size" field (range of numbers in text mode,
+      no fixed length and a "10000+" value for  more than 10000 employees) and the lack of
+      "split" function in calculated rows in SQL, sorting of data by "size" field has to 
+      be done here */
 
       companiesListOrderedBySize.sort((a, b) => {
         let aSizeOrder = a.size.split("-")[0].padStart(6, "0");
         let bSizeOrder = b.size.split("-")[0].padStart(6, "0");
+
+        //gets the first number of the range of employees
+        //Case 10000+ will not be splitted due to lack of "-"
+        //The results are start-padded to length of 6 with zeroes in order to be compared to "10000+"
 
         if (aSizeOrder > bSizeOrder) {
           return 1;
