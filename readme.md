@@ -1,12 +1,6 @@
 # JOBMADRID / NUWE CHALLENGE
 
-> Brief description: An API that connects to a MySQL dabase named nuwe_challenge that contains a table named companies and has five enpoints to
-
-lists all companies sorted by size
-lists all companies sorted by foundation year
-lists number of companies of each industry type
-lists number of companies of each size
-lists number of companies of each year of foundation
+> Brief description: An API that connects to a MySQL dabase named nuwe_challenge that contains a table named companies and has five enpoints to: lists all companies sorted by size, lists all companies sorted by foundation year, lists number of companies of each industry type, lists number of companies of each size, lists number of companies of each year of foundation.
 
 ## Usage
 
