@@ -3,7 +3,7 @@ var companyModel = require("../models/companyModel.js");
 module.exports = {
   getCompaniesListOrderedBySize: async () => {
     try {
-      var companiesListOrderedBySize = await companyModel.getCompaniesListOrderedBySize();
+      let companiesListOrderedBySize = await companyModel.getCompaniesListOrderedBySize();
       /*Due to the nature of "size" field (range of numbers in text mode,
       no fixed length and a "10000+" value for  more than 10000 employees) and the lack of
       "split" function in calculated rows in SQL, sorting of data by "size" field has to 
