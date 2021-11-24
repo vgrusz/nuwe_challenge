@@ -27,7 +27,9 @@ All components returns a JSON with data
 
 ## Installation
 
-Clone repository and run npm install to install node components, then node app to run app
+Clone repository and import the sql DB located in /sql_dump to your sql server.
+Configure it to run on port 3306 or modify settings.json to match your sql server parameters.
+Then run npm install to install node components, and finally run node app to run app
 
 ```shell
     # Clone or install commands
@@ -40,6 +42,7 @@ Clone repository and run npm install to install node components, then node app t
 ```
 
 ## Coderefactor review
+
 A+
 
 ## License
