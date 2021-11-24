@@ -28,7 +28,7 @@ All components returns a JSON with data
 ## Installation
 
 Clone repository and import the sql DB located in /sql_dump to your sql server.
-Configure it to run on port 3306 or modify settings.json to match your sql server parameters.
+Configure it to run on port 3306 with root/root username and pass or modify settings.json to match your sql server parameters.
 Then run npm install to install node components, and finally run node app to run app
 
 ```shell
