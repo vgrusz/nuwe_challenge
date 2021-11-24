@@ -18,7 +18,7 @@ app.get("/companiesSortedBySize", async (req, res) => {
   }
 });
 
-app.get("/companiesSortedByFound", async (req, res) => {
+app.get("/companiesSortedByFounded", async (req, res) => {
   try {
     let companiesListOrderedByFound = await companyController.getCompaniesListOrderedByFound();
 
